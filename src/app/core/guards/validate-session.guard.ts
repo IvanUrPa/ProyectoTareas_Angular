@@ -7,9 +7,10 @@ import { Observable } from 'rxjs';
 })
 export class ValidateSessionGuard implements CanActivate {
 
-  private cookie:string | null = '12345';
+  private cookie:string | null = 'null';
 
   constructor(private router:Router) {
+
   }
 
   canActivate(
@@ -18,14 +19,15 @@ export class ValidateSessionGuard implements CanActivate {
     return this.checkCookie();
   }
 
-  //* funcion para bscar la cookie
   private checkCookie():boolean {
-    console.log('Funcionando cookie', this.cookie);
-    if (this.cookie !== null) {
+    console.log('ok', this.cookie);
+
+    if(this.cookie !== null) {
       return true;
     } else {
-      this.router.navigate(['/','auth','login']);
+      this.router.navigate(['/','auth','login'])
       return false;
     }
   }
+
 }

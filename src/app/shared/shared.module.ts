@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReplaceSpacePipe } from './pipes/replace-space.pipe';
 
+
+
 @NgModule({
   declarations: [
     ReplaceSpacePipe
@@ -10,6 +12,9 @@ import { ReplaceSpacePipe } from './pipes/replace-space.pipe';
     CommonModule
   ],
   exports: [
+    ReplaceSpacePipe
+  ],
+  providers: [
     ReplaceSpacePipe
   ]
 })

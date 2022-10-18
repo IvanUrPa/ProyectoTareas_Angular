@@ -5,9 +5,9 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class ReplaceSpacePipe implements PipeTransform {
 
-  //* Quitar los espacios en blanco
-  transform(value: unknown, ...args: unknown[]): unknown {
-    return null;
+  transform(value: string, args: string): string {
+    value = value.split(' ').join(args).toLocaleLowerCase()
+    return value;
   }
 
 }
