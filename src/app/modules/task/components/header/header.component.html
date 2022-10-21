@@ -1,0 +1,39 @@
+<div class="navbar">
+  <div class="d-flex logo-section d-all-center">
+    <!--<div class="logo" [routerLink]="['/','auth','login']">
+      {{testCourseService.dataTest}}
+    </div>-->
+    <div class="logo">Task</div>
+    <div class="menu">
+      <ul>
+        <!--TODO: menu es el nombre del array que se encuentra en el archivo del componente-->
+        <!--TODO: index y first son palabras reservadas dentro de la estructura directiva ngfor-->
+        <!--<li *ngFor="let item of menu; let indice = index; let primero = first; let ultimo = last">
+          {{ultimo}}-{{item.name}}
+        </li>-->
+        <!--TODO: saber si un numero es par (even) o inpar (odd)-->
+        <!--<li *ngFor="let item of menu; let par = even">
+          {{par}}-{{item.name}}
+        </li>-->
+        <!--TODO: permite aplicar una o más clases de la hoja de estilos-->
+        <li [ngClass]="{'active':primero, 'otra-clase': true}" *ngFor="let item of menu; let primero = first">
+          {{item.name}}
+        </li>
+        <!--TODO: Aplicar clase por interpolación-->
+        <!--<li class="{{primero ? 'active':''}}" *ngFor="let item of menu; let primero = first">
+          {{item.name}}
+        </li>-->
+      </ul>
+    </div>
+  </div>
+  <div class="d-flex d-all-center user-section">
+
+    <div class="notifications">
+      <span class="count">5</span>
+      <i class="uil uil-bell"></i>
+    </div>
+    <div class="avatar d-all-center d-flex">
+      <img src="https://avatars.githubusercontent.com/u/15802366?v=4" alt="">
+    </div>
+  </div>
+</div>

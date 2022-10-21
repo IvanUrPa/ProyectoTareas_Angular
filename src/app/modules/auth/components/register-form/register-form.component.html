@@ -3,16 +3,24 @@
     <i class="logo-icon uil uil-apps"></i>
   </div>
 
-  <pre>{{registerForm.value | json}}</pre>
+  <pre>{{registerForm.pending | json}}</pre>
+  <div>
+    <button class="btn-primary" (click)="testLoaded()">Cargar Data</button>
+  </div>
+  <div>
+    <button class="btn-primary" (click)="testUploaded()">Actualizar Data</button>
+  </div>
+
+  <div class="text-label d-flex d-all-center">Crea tu cuenta {{registerForm.invalid}}</div>
 
   <form [formGroup]="registerForm"  class="form d-flex">
     <div class="form-input">
-      <input formControlName="email"
-             type="text" placeholder="Introduzca el correo electrónico">
-    </div>
-    <div class="form-input">
       <input formControlName="name"
              type="text" placeholder="Introduzca nombre">
+    </div>
+    <div class="form-input">
+      <input formControlName="email"
+             type="text" placeholder="Introduzca el correo electrónico">
     </div>
     <div class="form-input">
       <input formControlName="lastName"
@@ -26,15 +34,16 @@
       <input formControlName="aboutMe"
              type="text" placeholder="Introduzca descripción">
     </div>
-    <div class="form-input">
+    <!--<div class="form-input">
         <input formControlName="password"
         type="password" placeholder="Introduzca la contraseña">
     </div>
     <div class="form-input">
         <input formControlName="passwordConfirm"
         type="password" placeholder="Confirmar la contraseña">
-    </div>
+    </div>-->
     <div class="form-input">
+      <!--<button [disabled]="registerForm.invalid || registerForm.pending"  class="btn-primary">Continuar</button>-->
       <button [disabled]="registerForm.invalid || registerForm.pending"  class="btn-primary">Continuar</button>
     </div>
 

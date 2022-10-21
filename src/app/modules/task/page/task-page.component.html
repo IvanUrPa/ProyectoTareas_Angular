@@ -1,1 +1,15 @@
-<p>task-page works!</p>
+<app-header></app-header>
+<!-- ** Muestra u oculta un div  al precionar un boton se ejecuta la función
+changeText que se encuentra en el componente** -->
+<!--<button (click)="changeText()">Cambiar</button>
+<div *ngIf="showText">
+  Hola mundo este es un texto
+</div>-->
+
+<!--TODO: case es el nombre de la variable que se encuentra en el archivo del componente-->
+<div class="padre" [ngSwitch]="case">
+  <div *ngSwitchCase="1" class="hijo">Hola soy Pedro</div>
+  <div *ngSwitchCase="2" class="hijo">Hola soy María</div>
+  <div *ngSwitchCase="3" class="hijo">Hola somos Pedro y María</div>
+  <div *ngSwitchDefault class="hijo">Opción por defecto</div>
+</div>
