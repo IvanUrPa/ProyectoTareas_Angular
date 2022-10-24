@@ -9,7 +9,7 @@ export class TaskPageComponent implements OnInit {
 
   // showText = true;
 
-  case: number = 5800;
+  // case: number = 4;
 
   constructor() { }
 
