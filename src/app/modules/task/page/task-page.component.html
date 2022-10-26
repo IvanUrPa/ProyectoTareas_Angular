@@ -1,4 +1,12 @@
 <app-header></app-header>
+
+<div class="task-columns">
+
+  <app-column [name]="group.label" [data]="group.list" *ngFor="let group of groups">
+  </app-column>
+
+</div>
+
 <!-- ** Muestra u oculta un div  al precionar un boton se ejecuta la función
 changeText que se encuentra en el componente** -->
 <!--<button (click)="changeText()">Cambiar</button>
@@ -14,9 +22,48 @@ changeText que se encuentra en el componente** -->
   <div *ngSwitchDefault class="hijo">Opción por defecto</div>
 </div>-->
 
-<div>
+<!--TODO: appImgBrken directiva propia creada dentro de los modulos shared-->
+<!--<div>
   <img appImgBroken src="https://avatars-.githubusercontent.com/u/15802366?v=4" alt="" class="imagen">
   <img appImgBroken src="https://avatars.githubusercontent.com/u/15802366?v=4" alt="" class="imagen">
   <img appImgBroken src="https://-avatars.githubusercontent.com/u/15802366?v=4" alt="" class="imagen">
   <img appImgBroken src="https://avatars.githubusercontent.com/u/15802366?v=4" alt="" class="imagen">
+</div>-->
+
+<!--TODO/ **seccion para hacer uso de templates-->
+<!--<div>
+  <ul *ngIf="results.length > 0 else tplNotFound">
+    <li *ngFor="let item of results">{{item}}</li>
+  </ul>
 </div>
+<div>
+  <ul *ngIf="resultsFilter.length > 0 else tplNotFound">
+    <li *ngFor="let item of resultsFilter">{{item}}</li>
+  </ul>
+</div>
+<div>
+  <ul *ngIf="resultsUpdated.length > 0 else tplNotFound">
+    <li *ngFor="let item of resultsUpdated">{{item}}</li>
+  </ul>
+</div>-->
+
+<!--TODO: el #id del ng-template sirve para hacer el llamdo y poder utilizarlo-->
+<!--<ng-template #tplNotFound>
+  <p>No hay resultados</p>
+</ng-template>-->
+
+<!--TODO: Uso de template ng-container-->
+<!--<ul>
+  <li *ngFor="let user of listUser">
+    <ng-container *ngTemplateOutlet="tplHello;context:{currentUser:user}"></ng-container>
+  </li>
+</ul>
+
+<ng-template #tplHello let-currentUser="currentUser">
+  Hola buenos días {{currentUser?.name}}
+</ng-template>-->
+
+<!--TODO: uso de ciclo ngOnChanges del componente column-->
+<!--<app-column [data]="listUser"></app-column>-->
+
+
