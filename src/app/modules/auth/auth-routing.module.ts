@@ -6,8 +6,8 @@ import {RegisterFormComponent} from "@modules/auth/components/register-form/regi
 const routes: Routes = [
   {
     path:'login',
-    //component: LoginPageComponent
-    component: RegisterFormComponent
+    component: LoginPageComponent
+    //component: RegisterFormComponent
   }
 ];
 

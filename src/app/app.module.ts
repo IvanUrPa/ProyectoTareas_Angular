@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {CookieModule} from "ngx-cookie";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import {CookieModule} from "ngx-cookie";
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     CookieModule.withOptions()
   ],
   providers: [],

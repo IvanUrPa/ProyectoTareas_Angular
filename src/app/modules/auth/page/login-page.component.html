@@ -9,9 +9,9 @@
     <div class="text-label d-flex d-all-center">
       Iniciar sesión
     </div>
-    <pre>
+    <!--<pre>
       {{loginForm.value | json}}
-    </pre>
+    </pre>-->
     <form [formGroup]="loginForm" (submit)="sendCredentials()" class="form d-flex">
       <div class="form-input">
         <input formControlName="email"
@@ -25,7 +25,7 @@
         <button [disabled]="loginForm.invalid" class="btn-primary">Iniciar sesión</button>
       </div>
       <div>o</div>
-      <!--<div class="form-input">
+      <div class="form-input">
         <button class="btn-default"><i class="uil uil-google"></i> Continuar con Google</button>
       </div>
       <div class="form-input">
@@ -33,11 +33,11 @@
       </div>
       <div class="form-input">
         <button  class="btn-default"><i class="uil uil-apple"></i> Continuar con Apple</button>
-      </div>-->
+      </div>
     </form>
   </div>
 
-  <!-- <app-register-form></app-register-form> -->
+   <!--<app-register-form></app-register-form>-->
 
 
 </div>

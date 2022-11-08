@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {AuthTestService} from "@modules/auth/services/auth-test.service";
+import {CookieService} from "ngx-cookie";
 
 @Component({
   selector: 'app-login-page',
@@ -10,7 +12,7 @@ export class LoginPageComponent implements OnInit {
 
   loginForm:FormGroup = new FormGroup({});
 
-  constructor() { }
+  constructor(private authService:AuthTestService, private cookieService:CookieService) { }
 
   ngOnInit(): void {
     this.loginForm = new FormGroup({
@@ -23,6 +25,14 @@ export class LoginPageComponent implements OnInit {
 
   sendCredentials():void {
     const body = this.loginForm.value;
+    this.authService.submitLogin(body)
+      .subscribe((response) => {
+        const {tokenSession} = response;
+        this.cookieService.put('token_session', tokenSession,{
+          path:'/'
+        })
+        console.log(response)
+      })
     console.log(body);
   }
 
